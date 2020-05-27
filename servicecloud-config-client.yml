@@ -1,0 +1,28 @@
+spring:
+    profiles:
+      active:
+       - dev
+---
+server:
+    port: 8763
+spring:
+    profiles: dev
+    application: 
+       name: servicecloud-config-client
+eureka:
+    client:
+       service-url:
+          defaultZone: http://localhost:8001/eureka/
+
+---
+
+server:
+    port: 8764
+spring:
+    profiles: test
+    application: 
+       name: servicecloud-config-client
+eureka:
+    client:
+      service-url:
+        defaultZone: http://localhost:8002/eureka/
