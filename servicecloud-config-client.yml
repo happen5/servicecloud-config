@@ -19,7 +19,7 @@ eureka:
 server:
     port: 8764
 spring:
-    profiles: test
+    profiles: dev
     application: 
        name: servicecloud-config-client
 eureka:
